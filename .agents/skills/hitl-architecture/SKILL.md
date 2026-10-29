@@ -4,7 +4,7 @@ description: "Use after human scope approval to design software architecture fro
 ---
 # HITL Architecture v5 (QAS-first / ADD-lite)
 
-목적: 요구사항을 함수·모듈로 곧바로 번역하지 않는다. **어떤 품질을 왜 더 중시하는지 → 어떤 설계 전략이 필요한지 → 어떤 모듈과 인터페이스가 적합한지**를 먼저 결정한다. 180분 해커톤에서는 SEI QAW/ADD/ATAM의 핵심 개념만 가볍게 적용한다. 전체 방법론의 정식 수행을 주장하지 않는다.
+목적: 요구사항을 함수·모듈로 곧바로 번역하지 않는다. **어떤 품질을 왜 더 중시하는지 → 어떤 설계 전략이 필요한지 → 어떤 모듈과 인터페이스가 적합한지**를 먼저 결정한다. SEI QAW/ADD/ATAM의 핵심 개념만 가볍게 적용한다. 전체 방법론의 정식 수행을 주장하지 않는다.
 
 ## 선행 조건과 입력
 - Human Gate 2: 사용자가 Must/Should/Out과 남은 정책 위험을 실제로 승인했는가? 아니면 설계는 `PROPOSED`로 유지하고 승인 필요한 것을 표시한다.
@@ -41,4 +41,3 @@ description: "Use after human scope approval to design software architecture fro
 - `ARCHITECTURE.md`: **QA Inventory / QAS / Priority / Drivers / Tactics / Alternatives / Modules / Verification / Risks / Human approval** 순서.
 - `DECISIONS.md`: 품질 우선순위, 선택·기각 대안, 사람의 명시적 승인(없으면 proposed).
 - 화면에는 (a) 상위 QAS, (b) 설계 선택 3~5개와 Trade-off, (c) 필요한 역질문 0~1개, (d) 승인 여부만 간결히 요약한다.
-- 제한시간이 촉박하면 `FAST` 모드: 핵심 2~3 QAS만 6요소로 완성하고 기존 기술 설계를 재활용한다. QAS 생성과 우선순위 단계를 **완전히 건너뛰지는 않는다**.
