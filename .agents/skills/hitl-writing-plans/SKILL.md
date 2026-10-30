@@ -7,7 +7,7 @@ description: "Use after human approval of SPEC.md and QAS-first ARCHITECTURE.md,
 
 **책임:** `무엇을/왜/어떤 품질로 만들지`는 이미 승인되었다. 이 Skill은 **어떤 파일·인터페이스·테스트·순서로 구현할지**만 정한다. 실제 구현, 의존성 설치, 프로젝트 생성, 테스트용 제품 코드 작성은 하지 않는다.
 
-**운용:** 사람 중심 180분 해커톤, Codex 단일 세션 기본. 자동 서브에이전트/워크트리/Hook/Python 검증 엔진 불필요. 전체 과정은 Spec-Driven Development(SDD)이며, 각 고위험 구현 Task는 Test-Driven Development(TDD)로 실행된다.
+**운용:** 전체 과정은 Spec-Driven Development(SDD)이며, 각 고위험 구현 Task는 Test-Driven Development(TDD)로 실행된다.
 
 ## 0. 선행 조건 / 자료 우선순위
 
@@ -25,7 +25,6 @@ description: "Use after human approval of SPEC.md and QAS-first ARCHITECTURE.md,
    - `Policy Blocker`가 Must의 기대 동작을 바꾸면 해당 Task는 `BLOCKED`; 정책을 창작하지 않는다.
    - `Integration Blocker`는 허용된 mock/추상 계약으로 내부 부분을 계획할 수 있지만, 통합 성공을 미리 선언하지 않는다.
    - QAS의 `TBD`는 측정 준비 Task/검증 한계로 남기고 임의 수치나 PASS를 만들지 않는다.
-4. **시간 예산:** 남은 작업 시간을 고려해 먼저 끝까지 작동하는 핵심 수직 슬라이스를 정한다. 보통 3~7개 Task 내외가 적절하나 강제하지 않는다. 불필요한 구조 변경·대규모 마이그레이션은 배제한다.
 
 ## 2. 파일 구조를 Task보다 먼저 결정
 
@@ -99,4 +98,3 @@ description: "Use after human approval of SPEC.md and QAS-first ARCHITECTURE.md,
 - 계획을 `PROPOSED`로 보존하고, 화면에는 **Must Task 순서 / 우선 QAS 커버리지 / 선행 차단 사항 / 예상 검증 / 인간 결정 1~3개**만 요약한다.
 - **사용자의 명시적 승인 전에는 구현을 시작하지 않는다.** 사용자가 수정 요청하면 PLAN만 고치고 재검토한다.
 - 사용자가 계획을 승인하고 `hitl-implementation` 실행을 지시하면, 다음 Skill이 `PLAN.md`를 읽어서 수행한다. **본 Skill은 자동으로 다음 Skill을 호출하거나 서브에이전트를 생성하지 않는다.**
-- 전체 시간 부족 시 `FAST`: `Must` 및 핵심 QAS 관련 Task만 남기되 **RED/GREEN 근거·검증 계약·미실행 표시를 삭제하지 않는다.**
