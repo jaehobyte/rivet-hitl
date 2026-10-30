@@ -26,7 +26,6 @@ description: "Use when SPEC.md and QAS-first ARCHITECTURE.md have human approval
    - `Integration Blocker`: 실제 계약·데이터 없음. 승인된 mock/추상 계약의 내부 검증과 실제 통합 검증을 분리한다.
    - `Architecture Assumption`: 검증할 기술 가정. 확인 방법, 담당 Task, 실패 시 재검토할 결정을 적는다.
    - `QAS Gap`: 측정 목표 미정. 측정 계획과 한계를 남기며 임의 목표나 PASS를 만들지 않는다.
-4. **실행 순서:** 확인된 잔여 시간과 의존성을 고려해 끝까지 동작하는 최소 Must 흐름을 먼저 정한다. 웹 과제는 첫 핵심 흐름에 최소 화면→API→판정/저장→관측을 연결한다. 시간 정보가 없으면 미확인으로 두며 임의의 잔여 시간을 쓰지 않는다.
 
 ## 1.5. 실행 기술 스택 선정 — File Map 작성 전
 
